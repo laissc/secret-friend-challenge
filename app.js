@@ -1,5 +1,5 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
-let listaAmigos = [];
+let amigos = [];
 
 /*
 Implemente uma função para adicionar amigos
@@ -30,8 +30,27 @@ function adicionarAmigo(){
         //validação de nome
         alert("Por favor, insira um nome.");
     }else{
-        listaAmigos.push(amigo);
+        amigos.push(amigo);
         limparCampo();
+        exibirLista();
     }
-    console.log(listaAmigos);
+    console.log(amigos);
 }
+
+function exibirLista(){
+    let lista = document.getElementById("listaAmigos");
+
+    // limpa a lista antes de nova adição para evitar repetição
+    lista.innerHTML = "";
+
+    // percorre array de amigos
+    for (let i = 0; i < amigos.length; i++){
+        // cria novo elemento li
+        let item = document.createElement("li");
+        item.textContent = amigos[i];
+
+        // adiciona li dentro de lu
+        lista.appendChild(item);
+    }
+}
+
