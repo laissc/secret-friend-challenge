@@ -1,20 +1,4 @@
-//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 let amigos = [];
-
-/*
-Implemente uma função para adicionar amigos
-Desenvolva uma função que permita ao usuário inserir um nome no campo de texto e adicioná-lo à lista de amigos criada anteriormente.
-
-Tarefas específicas:
-Capturar o valor do campo de entrada: Utilize document.getElementById ou document.querySelector para obter o texto inserido pelo usuário.
-
-Validar a entrada: Implemente uma validação para garantir que o campo não esteja vazio.
-
-Se estiver vazio, exiba um alerta com a mensagem de erro: "Por favor, insira um nome."
-
-Atualizar o array de amigos: Se o valor for válido, adicione-o ao array que armazena os nomes dos amigos usando o método .push().
-
-Limpar o campo de entrada: Após adicionar o nome, redefina o campo de texto para uma string vazia.*/
 
 function limparCampo(){
     //amigo = document.querySelector("input");
@@ -54,3 +38,28 @@ function exibirLista(){
     }
 }
 
+function sortearAmigo(){
+    tamLista = amigos.length;
+    // verifica se tem alguém na lista
+    if (tamLista == 0) {
+        alert("Sua lista está vazia! \nAdicione pelo menos um amigo antes de sortear.");
+    }else{
+        // gerar um índice aleatório
+        let indice = Math.floor(Math.random() * amigos.length);
+
+        // obter amigo da posição indicada pelo índice
+        let sorteado = amigos[indice];
+
+        // exibir na tela
+        let resultado = document.getElementById("resultado");
+        resultado.innerHTML = "<li>" + sorteado + "</li>";
+        removerSorteado(indice);
+        
+    }
+}
+
+function removerSorteado(indice){
+    // a partir da posição indice, remover 1 elemento
+    amigos.splice(indice, 1);
+    exibirLista()
+}
