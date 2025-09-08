@@ -2,6 +2,7 @@
 ![badge last commit](https://img.shields.io/github/last-commit/laissc/secret-friend-challenge)
 ![badge created at](https://img.shields.io/github/created-at/laissc/secret-friend-challenge)
 ![badge contributors](https://img.shields.io/github/contributors/laissc/secret-friend-challenge)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## DESCRIÇÃO DO PROJETO
 Aplicação simples para adicionar nomes a uma lista de amigos.
@@ -15,5 +16,4 @@ Projeto concluído :white_check_mark:
 HTML, CSS, JavaScript
 
 ## Licença 
-The [MIT License]() (MIT)
-Copyright :copyright: Ano - Titulo do Projeto
+Este projeto está licenciado sob os termos da [MIT License](LICENSE).
