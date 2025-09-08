@@ -58,8 +58,9 @@ function sortearAmigo(){
     }
 }
 
+// função extra pra remover da lista amigo já sorteado
 function removerSorteado(indice){
     // a partir da posição indice, remover 1 elemento
-    amigos.splice(indice, 1);
+    amigos.splice(indice, 1); //achei essa função mó fofa, splice
     exibirLista()
 }
